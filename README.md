@@ -2,7 +2,7 @@
 ## Reactを動かすために
 ### 以下記事の3つ目までをやる
 
-[https://qiita.com/rspmharada7645/items/25c496aee87973bcc7a5#3-creat-react-appのインストール](https://qiita.com/rspmharada7645/items/25c496aee87973bcc7a5#3-creat-react-app%E3%81%AE%E3%82%A4%E3%83%B3%E
+https://qiita.com/rspmharada7645/items/25c496aee87973bcc7a5#3-creat-react-appのインストール
 
 ### nodeのバージョン管理を入れる
 - asdfをインストール
@@ -11,12 +11,13 @@ $ brew install asdf
 ```
 
 - PATHを通す
-zsh
+
+zshの方
 ```
 $ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 ```
 
-bash
+bashの方
 ```
 $ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.bash_profile
 $ echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.bash_profile

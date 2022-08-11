@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 環境構築
+## Reactを動かすために
+### 以下記事の3つ目までをやる
 
-## Getting Started
+[https://qiita.com/rspmharada7645/items/25c496aee87973bcc7a5#3-creat-react-appのインストール](https://qiita.com/rspmharada7645/items/25c496aee87973bcc7a5#3-creat-react-app%E3%81%AE%E3%82%A4%E3%83%B3%E
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+### nodeのバージョン管理を入れる
+- asdfをインストール
+```
+$ brew install asdf
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- PATHを通す
+zsh
+```
+$ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+bash
+```
+$ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.bash_profile
+$ echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.bash_profile
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- 順番にインストール
+```
+$ brew install gpg gawk
+$ asdf plugin-add nodejs 
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- node 16.16.0をインストール
+```
+$ asdf install nodejs 16.16.0
+```
 
-## Learn More
+- 全体に反映
+```
+$ asdf global nodejs 16.16.0
+```
 
-To learn more about Next.js, take a look at the following resources:
+- バージョンが反映されていればOK
+```
+$ node -v
+v16.16.0
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## リポジトリをクローン
+1. クローンする
+2. `$ yarn isntal` を実行
+3. `$ yarn dev` を実行してサーバー立ち上げ
+4. ハロワが出てきたらOK

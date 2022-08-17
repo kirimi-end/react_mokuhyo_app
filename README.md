@@ -63,26 +63,32 @@ v16.16.0
 4. ハロワが出てきたら OK
 
 ## Prettier
+
 - Prettier 公式サイト https://prettier.io/
 - コードフォーマッタ
 - ソースコードを自動的に整形してくれる（インデントとか）
 
 ## ESLint
+
 - ESLint 公式サイト https://eslint.org/
 - Linter
-- JavaScript/TypeScriptのコードが、指定したルールに違反してないかをチェックして、違反していたら指摘してくれたり、修正してくれたりする
+- JavaScript/TypeScript のコードが、指定したルールに違反してないかをチェックして、違反していたら指摘してくれたり、修正してくれたりする
 - 宣言したが使っていない変数があると警告を出してくれたり、バグの温床になりそうなコードを見つけてエラーを出してくれる
 
 ## Prettier の設定
+
 - Next.js に合わせて、セミコロンはつけないスタイル
 - それ以外は Prettier 標準設定
-- VSCode を使っている人は こちらの拡張機能 をインストールしてください。保存時に自動的にコードが整形されます。
+- VSCode を使っている人は こちらの拡張機能(以下参照) をインストールしてください。保存時に自動的にコードが整形されます。
+  - 拡張機能 Prettier
+    https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 - ていうか VSCode 使ってください。絶対だ。 Facebook (Meta) の社内標準エディタですよ。
 
 ## ESLint の設定
+
 - もともと ESLint は入っていた。
 - しかし、設定が甘かった
-- 標準的なTypeScriptのコードのチェックと、標準的なReact文法のチェックなどを導入
+- 標準的な TypeScript のコードのチェックと、標準的な React 文法のチェックなどを導入
 - VSCode に こちらの拡張機能(以下参照) をインストールしてください。リアルタイムで ESLint の警告やエラーが表示されるようになります。
   - 拡張機能 Prettier
     https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
@@ -93,4 +99,5 @@ v16.16.0
 - これにより、整形されていないソースコードや ESLint の警告やエラーが出るコードが絶対にリポジトリに混じらないように対策できます。
 
 ## 実行コマンド
-`yarn lint` でESLintとPrettierが実行される。
+
+`yarn lint` で ESLint と Prettier が実行される。

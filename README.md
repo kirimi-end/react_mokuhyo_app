@@ -1,55 +1,66 @@
 # 環境構築
-## Reactを動かすために
-### 以下記事の3つ目までをやる
+
+## React を動かすために
+
+### 以下記事の 3 つ目までをやる
 
 https://qiita.com/rspmharada7645/items/25c496aee87973bcc7a5#3-creat-react-appのインストール
 
-### nodeのバージョン管理を入れる
-- asdfをインストール
+### node のバージョン管理を入れる
+
+- asdf をインストール
+
 ```
 $ brew install asdf
 ```
 
-- PATHを通す
+- PATH を通す
 
-zshの方
+zsh の方
+
 ```
 $ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 ```
 
-bashの方
+bash の方
+
 ```
 $ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.bash_profile
 $ echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.bash_profile
 ```
 
 - 順番にインストール
+
 ```
 $ brew install gpg gawk
 $ asdf plugin-add nodejs
 ```
 
-- node 16.16.0をインストール
+- node 16.16.0 をインストール
+
 ```
 $ asdf install nodejs 16.16.0
 ```
 
 - 全体に反映
+
 ```
 $ asdf global nodejs 16.16.0
 ```
 
-- バージョンが反映されていればOK
+- バージョンが反映されていれば OK
+
 ```
 $ node -v
 v16.16.0
 ```
 
 ## リポジトリをクローン
+
 1. クローンする
 2. `$ yarn install` を実行
 3. `$ yarn dev` を実行してサーバー立ち上げ
-4. ハロワが出てきたらOK
+4. ハロワが出てきたら OK
 
 ## Prettier
 - Prettier 公式サイト https://prettier.io/
@@ -80,3 +91,6 @@ v16.16.0
 - 自動修正できない問題を検出したときは、commit が中断されます。
 - その場合は、エラー文を参考にソースコードを修正し、再度 commit してください。
 - これにより、整形されていないソースコードや ESLint の警告やエラーが出るコードが絶対にリポジトリに混じらないように対策できます。
+
+## 実行コマンド
+`yarn lint` でESLintとPrettierが実行される。

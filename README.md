@@ -1,11 +1,5 @@
 # 環境構築
 
-## React を動かすために
-
-### 以下記事の 3 つ目までをやる
-
-https://qiita.com/rspmharada7645/items/25c496aee87973bcc7a5#3-creat-react-appのインストール
-
 ### node のバージョン管理を入れる
 
 - asdf をインストール
@@ -58,46 +52,46 @@ v16.16.0
 ## リポジトリをクローン
 
 1. クローンする
-2. `$ yarn install` を実行
+2. `$ yarn` を実行
 3. `$ yarn dev` を実行してサーバー立ち上げ
-4. ハロワが出てきたら OK
+4. `localhost:3000` にアクセス
+5. ハロワが出てきたら OK
 
-## Prettier
+## エディタについて
+
+エディタは **Visual Studio Code (VSCode)** を使用してください。  
+理由は下記のとおりです。
+
+- JavaScript や TypeScript との相性がいい
+- Facebook のデフォルトの開発環境として採用されている
+
+## Linter, Formatter について
+
+ESLint, Prettier を使用し、ソースコード解析とフォーマットを実施しています（次の項で詳細を説明）。  
+`yarn lint` で ESLint、Prettier、TypeScript による型チェックを実行できます。  
+自動修正できない問題を検出したときはエラー文が表示されますので、該当するソースコードを修正してください。
+
+### Prettier
 
 - Prettier 公式サイト https://prettier.io/
-- コードフォーマッタ
+- Formatter
 - ソースコードを自動的に整形してくれる（インデントとか）
+- Next.js に合わせて、セミコロンはつけないスタイル
+- それ以外は Prettier 標準設定
+- VSCode に [こちらの拡張機能](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) をインストールしてください。保存時に自動的にコードが整形されます。
 
-## ESLint
+### ESLint
 
 - ESLint 公式サイト https://eslint.org/
 - Linter
 - JavaScript/TypeScript のコードが、指定したルールに違反してないかをチェックして、違反していたら指摘してくれたり、修正してくれたりする
 - 宣言したが使っていない変数があると警告を出してくれたり、バグの温床になりそうなコードを見つけてエラーを出してくれる
+- デフォルトで入っていた Next.js のチェックに加え、標準的な TypeScript のコードのチェックと、標準的な React 文法のチェックなどを導入
+- VSCode に [こちらの拡張機能](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) をインストールしてください。リアルタイムで ESLint の警告やエラーが表示されるようになります。
 
-## Prettier の設定
+### commit 時の自動解析について（ simple-git-hooks 使用）
 
-- Next.js に合わせて、セミコロンはつけないスタイル
-- それ以外は Prettier 標準設定
-- VSCode を使っている人は こちらの拡張機能(以下参照) をインストールしてください。保存時に自動的にコードが整形されます。
-  - 拡張機能 Prettier
-    https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-- ていうか VSCode 使ってください。絶対だ。 Facebook (Meta) の社内標準エディタですよ。
-
-## ESLint の設定
-
-- もともと ESLint は入っていた。
-- しかし、設定が甘かった
-- 標準的な TypeScript のコードのチェックと、標準的な React 文法のチェックなどを導入
-- VSCode に こちらの拡張機能(以下参照) をインストールしてください。リアルタイムで ESLint の警告やエラーが表示されるようになります。
-  - 拡張機能 Prettier
-    https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-- commit 時の自動解析について（ simple-git-hooks 使用）
 - git commit のタイミングで自動的に ESLint、Prettier、TypeScript による型チェックが走るように設定しています。
-- 自動修正できない問題を検出したときは、commit が中断されます。
+- 自動修正できない問題を検出したときは、 commit が中断されます。
 - その場合は、エラー文を参考にソースコードを修正し、再度 commit してください。
-- これにより、整形されていないソースコードや ESLint の警告やエラーが出るコードが絶対にリポジトリに混じらないように対策できます。
-
-## 実行コマンド
-
-`yarn lint` で ESLint と Prettier が実行される。
+- これにより、整形されていないソースコードや ESLint の警告やエラーが出るコードが絶対にリポジトリに混じらないように対策しています。

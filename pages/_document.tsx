@@ -31,7 +31,6 @@ type MyAppType = NextComponentType<
 
 export default class MyDocument extends Document<MyDocumentProps> {
   render() {
-    const { emotionStyleTags } = this.props
     return (
       <Html lang="en">
         <Head>
@@ -43,7 +42,7 @@ export default class MyDocument extends Document<MyDocumentProps> {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           <meta name="emotion-insertion-point" content="" />
-          {emotionStyleTags}
+          {this.props.emotionStyleTags}
         </Head>
         <body>
           <Main />

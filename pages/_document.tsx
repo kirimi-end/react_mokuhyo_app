@@ -7,15 +7,15 @@ import Document, {
 } from "next/document"
 import createEmotionServer from "@emotion/server/create-instance"
 import { EmotionJSX } from "@emotion/react/types/jsx-namespace"
-import theme from "~/mui/theme"
-import createEmotionCache from "~/mui/createEmotionCache"
 import type {
   AppContextType,
   AppInitialProps,
   AppPropsType,
   NextComponentType,
 } from "next/dist/shared/lib/utils"
-import { EmotionCache } from "@emotion/react"
+import type { EmotionCache } from "@emotion/react"
+import theme from "~/mui/theme"
+import createEmotionCache from "~/mui/createEmotionCache"
 
 type MyDocumentProps = {
   emotionStyleTags: EmotionJSX.Element[]

@@ -1,7 +1,8 @@
 import type { NextPage } from "next"
+import Page from "~/components/pages/home"
 
 const Home: NextPage = () => {
-  return <div>わあああ!!!!! あなたは、環境構築できました！</div>
+  return <Page />
 }
 
 export default Home

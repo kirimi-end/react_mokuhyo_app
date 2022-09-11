@@ -1,4 +1,11 @@
-import { Box, Button, Container, Typography } from "@mui/material"
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  TextField,
+  Typography,
+} from "@mui/material"
 import { Global, css } from "@emotion/react"
 
 const Page = () => {
@@ -13,6 +20,22 @@ const Page = () => {
           }
         `}
       />
+      <TextField
+        id="demo-helper-text-aligned-no-helper"
+        label="Name"
+        sx={{
+          backgroundColor: "white",
+        }}
+      />
+
+      <Box sx={{ marginTop: "200px" }} />
+      <Divider
+        variant="middle"
+        sx={{
+          borderColor: "white",
+        }}
+      />
+
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="caption" gutterBottom>
           こちらでよろしいですか？

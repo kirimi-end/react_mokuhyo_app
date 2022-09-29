@@ -20,9 +20,10 @@ const Page = () => {
           }
         `}
       />
+
       <TextField
-        id="demo-helper-text-aligned-no-helper"
-        label="Name"
+        fullWidth
+        label="お名前"
         sx={{
           backgroundColor: "white",
         }}

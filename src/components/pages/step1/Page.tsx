@@ -21,6 +21,11 @@ const Page = () => {
         `}
       />
 
+      <Box sx={{ mb: 2 }}>
+        <Typography sx={{ backgroundColor: "white", p: 2 }}>
+          飼い主の、あなたのお名前を 教えてください！
+        </Typography>
+      </Box>
       <TextField
         fullWidth
         label="お名前"
@@ -28,7 +33,6 @@ const Page = () => {
           backgroundColor: "white",
         }}
       />
-
       <Box sx={{ marginTop: "200px" }} />
       <Divider
         variant="middle"
@@ -36,13 +40,11 @@ const Page = () => {
           borderColor: "white",
         }}
       />
-
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="caption" gutterBottom>
           こちらでよろしいですか？
         </Typography>
       </Box>
-
       <Button
         fullWidth
         variant="outlined"

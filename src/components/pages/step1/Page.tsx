@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material"
 import { Global, css } from "@emotion/react"
+import { relative } from "path"
 
 const Page = () => {
   return (
@@ -22,7 +23,23 @@ const Page = () => {
       />
 
       <Box sx={{ mb: 2 }}>
-        <Typography sx={{ backgroundColor: "white", p: 2 }}>
+        <Typography
+          sx={{
+            backgroundColor: "white",
+            p: 2,
+            position: "relative",
+            "&::before": {
+              content: "''",
+              position: "absolute",
+              top: "calc(50% - 10px)",
+              left: "-10px",
+              width: "20px",
+              height: "20px",
+              backgroundColor: "white",
+              transform: "rotate(45deg)",
+            },
+          }}
+        >
           飼い主の、あなたのお名前を 教えてください！
         </Typography>
       </Box>

@@ -1,13 +1,7 @@
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  TextField,
-  Typography,
-} from "@mui/material"
+import { Box, Button, Container, Divider, Typography } from "@mui/material"
 import { Global, css } from "@emotion/react"
 import Balloon from "./Balloon"
+import Step1Form from "./Step1Form"
 
 const Page = () => {
   return (
@@ -25,13 +19,7 @@ const Page = () => {
       <Box sx={{ mb: 2 }}>
         <Balloon />
       </Box>
-      <TextField
-        fullWidth
-        label="お名前"
-        sx={{
-          backgroundColor: "white",
-        }}
-      />
+      <Step1Form />
       <Box sx={{ marginTop: "200px" }} />
       <Divider
         variant="middle"

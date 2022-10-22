@@ -18,5 +18,16 @@
     "scope": "javascriptreact,typescriptreact",
     "prefix": "children",
     "body": "children: React.ReactNode"
+  },
+  "React 関数コンポーネント": {
+    "scope": "typescriptreact",
+    "prefix": "fc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE/[\\.].+//}} = () => {",
+      "  return <></>",
+      "}",
+      "",
+      "export default $1"
+    ]
   }
 }

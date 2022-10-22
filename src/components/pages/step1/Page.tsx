@@ -2,6 +2,7 @@ import { Box, Button, Container, Divider, Typography } from "@mui/material"
 import { Global, css } from "@emotion/react"
 import Balloon from "./Balloon"
 import Step1Form from "./Step1Form"
+import ConfirmButton from "./ConfirmButton"
 
 const Page = () => {
   return (
@@ -20,30 +21,9 @@ const Page = () => {
         <Balloon />
       </Box>
       <Step1Form />
-      <Box sx={{ marginTop: "200px" }} />
-      <Divider
-        variant="middle"
-        sx={{
-          borderColor: "white",
-        }}
-      />
-      <Box sx={{ textAlign: "center" }}>
-        <Typography variant="caption" gutterBottom>
-          こちらでよろしいですか？
-        </Typography>
+      <Box sx={{ marginTop: "200px" }}>
+        <ConfirmButton />
       </Box>
-      <Button
-        fullWidth
-        variant="outlined"
-        sx={{
-          backgroundColor: "white",
-          "&:hover": {
-            backgroundColor: "white",
-          },
-        }}
-      >
-        OK
-      </Button>
     </Container>
   )
 }

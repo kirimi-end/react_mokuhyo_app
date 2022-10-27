@@ -9,7 +9,7 @@ const Page = () => {
       <Box sx={{ marginTop: "100px" }} />
       <GlobalStyles />
       <Box sx={{ mb: 2 }}>
-        <Balloon />
+        <Balloon>ぼくの名前をつけてね！</Balloon>
       </Box>
       <Box sx={{ marginTop: "200px" }}>
         <ConfirmButton />

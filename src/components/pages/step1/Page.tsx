@@ -10,7 +10,7 @@ const Page = () => {
       <Box sx={{ marginTop: "100px" }} />
       <GlobalStyles />
       <Box sx={{ mb: 2 }}>
-        <Balloon />
+        <Balloon>飼い主の、あなたのお名前を教えてください！</Balloon>
       </Box>
       <Step1Form />
       <Box sx={{ marginTop: "200px" }}>

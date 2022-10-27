@@ -1,22 +1,14 @@
 import { Box, Container } from "@mui/material"
-import { Global, css } from "@emotion/react"
 import Balloon from "../../common/Balloon"
 import Step1Form from "./Step1Form"
 import ConfirmButton from "../../common/ConfirmButton"
+import GlobalStyles from "~/components/common/GlobalStyles"
 
 const Page = () => {
   return (
     <Container>
       <Box sx={{ marginTop: "100px" }} />
-      {/* TODO: Globalは全ページに適応させたいので、共通化させる */}
-      <Global
-        styles={css`
-          body {
-            background-color: #d1e1fa;
-          }
-        `}
-      />
-
+      <GlobalStyles />
       <Box sx={{ mb: 2 }}>
         <Balloon />
       </Box>

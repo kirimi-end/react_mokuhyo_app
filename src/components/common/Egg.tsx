@@ -1,14 +1,3 @@
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  TextField,
-  Typography,
-} from "@mui/material"
-import { Global, css } from "@emotion/react"
-import { relative } from "path"
-
 const Egg = () => {
   return (
     <svg

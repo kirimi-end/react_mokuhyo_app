@@ -1,7 +1,6 @@
 import { Box, Container } from "@mui/material"
 import { Global, css } from "@emotion/react"
 import Balloon from "../../common/Balloon"
-import Step1Form from "./Step1Form"
 import ConfirmButton from "../../common/ConfirmButton"
 
 const Page = () => {
@@ -20,7 +19,6 @@ const Page = () => {
       <Box sx={{ mb: 2 }}>
         <Balloon />
       </Box>
-      <Step1Form />
       <Box sx={{ marginTop: "200px" }}>
         <ConfirmButton />
       </Box>

@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material"
+import { Box, Container, TextField, Typography } from "@mui/material"
 import Balloon from "../../common/Balloon"
 import ConfirmButton from "../../common/ConfirmButton"
 import GlobalStyles from "~/components/common/GlobalStyles"
@@ -12,7 +12,7 @@ const Page = () => {
       <Box sx={{ mb: 2 }}>
         <Balloon>ぼくの名前をつけてね！</Balloon>
       </Box>
-      {/* FIXME: たまごちゃんでっかくしないといけないの */}
+
       <Box sx={{ textAlign: "center" }}>
         <Egg
           css={{
@@ -20,6 +20,16 @@ const Page = () => {
             height: "auto",
           }}
         />
+      </Box>
+
+      <Box sx={{ textAlign: "center" }}>
+        <Typography>この子の名前は</Typography>
+        <TextField
+          sx={{
+            backgroundColor: "white",
+          }}
+        />
+        <Typography>だよ!</Typography>
       </Box>
 
       <Box sx={{ marginTop: "200px" }}>

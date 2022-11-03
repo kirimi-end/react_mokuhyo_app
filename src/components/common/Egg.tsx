@@ -1,6 +1,11 @@
-const Egg = () => {
+type Props = {
+  className?: string
+}
+
+const Egg = ({ className }: Props) => {
   return (
     <svg
+      className={className}
       width="74"
       height="88"
       viewBox="0 0 74 88"

@@ -14,7 +14,12 @@ const Page = () => {
       </Box>
       {/* FIXME: たまごちゃんでっかくしないといけないの */}
       <Box sx={{ textAlign: "center" }}>
-        <Egg />
+        <Egg
+          css={{
+            width: "118px",
+            height: "auto",
+          }}
+        />
       </Box>
 
       <Box sx={{ marginTop: "200px" }}>

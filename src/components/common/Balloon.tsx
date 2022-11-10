@@ -1,7 +1,11 @@
 import { Grid, Typography } from "@mui/material"
 import Egg from "./Egg"
 
-const Balloon = () => {
+type Props = {
+  children: React.ReactNode
+}
+
+const Balloon = ({ children }: Props) => {
   return (
     <Grid container>
       <Grid item xs={3} sm={2}>
@@ -25,7 +29,7 @@ const Balloon = () => {
             },
           }}
         >
-          飼い主の、あなたのお名前を 教えてください！
+          {children}
         </Typography>
       </Grid>
     </Grid>

@@ -23,7 +23,7 @@ const Page = () => {
         />
       </Box>
 
-      <Dragon />
+      <Dragon dragonType="green" title="ヤー" description="へー" />
 
       <Box sx={{ marginTop: "200px" }}>
         <ConfirmButton />

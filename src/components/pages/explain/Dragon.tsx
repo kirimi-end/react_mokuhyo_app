@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material"
-import DragonFace from "~/components/common/DragonFace"
+import DragonFaceGreen from "~/components/common/DragonFaceGreen"
+import DragonFaceRed from "~/components/common/DragonFaceRed"
 
 type Props = {
   dragonType: "green" | "red"
@@ -12,7 +13,7 @@ const Dragon = ({ dragonType, title, description }: Props) => {
     <Box sx={{ backgroundColor: "white", p: 1 }}>
       <Box sx={{ textAlign: "center" }}>
         {dragonType === "green" && (
-          <DragonFace
+          <DragonFaceGreen
             css={{
               width: "118px",
               height: "auto",
@@ -20,7 +21,7 @@ const Dragon = ({ dragonType, title, description }: Props) => {
           />
         )}
         {dragonType === "red" && (
-          <DragonFace
+          <DragonFaceRed
             css={{
               width: "118px",
               height: "auto",

@@ -23,7 +23,16 @@ const Page = () => {
         />
       </Box>
 
-      <Dragon dragonType="green" title="ヤー" description="へー" />
+      <Dragon
+        dragonType="green"
+        title="習慣の竜"
+        description="毎日、毎週何曜日など、決められた時に発生する竜。筋トレ、掃除、勉強など"
+      />
+      <Dragon
+        dragonType="red"
+        title="単発の竜"
+        description="単発のもの。今日だけや、腰が重い仕事、初めてやりたいことなど"
+      />
 
       <Box sx={{ marginTop: "200px" }}>
         <ConfirmButton />

@@ -2,7 +2,7 @@ type Props = {
   className?: string
 }
 
-const DragonFace = ({ className }: Props) => {
+const DragonFaceGreen = ({ className }: Props) => {
   return (
     <svg
       className={className}
@@ -47,4 +47,4 @@ const DragonFace = ({ className }: Props) => {
   )
 }
 
-export default DragonFace
+export default DragonFaceGreen

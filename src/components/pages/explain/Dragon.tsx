@@ -10,12 +10,20 @@ type Props = {
 
 const Dragon = ({ dragonType, title, description }: Props) => {
   return (
-    <Box sx={{ backgroundColor: "white", p: 1 }}>
+    <Box
+      sx={{
+        backgroundColor: "white",
+        display: "flex",
+        alignItems: "center",
+        p: 2,
+        mt: 3,
+      }}
+    >
       <Box sx={{ textAlign: "center" }}>
         {dragonType === "green" && (
           <DragonFaceGreen
             css={{
-              width: "118px",
+              width: "50px",
               height: "auto",
             }}
           />
@@ -23,14 +31,28 @@ const Dragon = ({ dragonType, title, description }: Props) => {
         {dragonType === "red" && (
           <DragonFaceRed
             css={{
-              width: "118px",
+              width: "50px",
               height: "auto",
             }}
           />
         )}
       </Box>
-      <Typography>{title}</Typography>
-      <Typography>{description}</Typography>
+      <Typography
+        sx={{
+          fontWeight: "bold",
+          flex: "none",
+          ml: 2,
+        }}
+      >
+        {title}
+      </Typography>
+      <Typography
+        sx={{
+          ml: 2,
+        }}
+      >
+        {description}
+      </Typography>
     </Box>
   )
 }

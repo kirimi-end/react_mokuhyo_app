@@ -1,6 +1,5 @@
-import { Box, Container } from "@mui/material"
+import { Box, Container, Button, Divider, Typography } from "@mui/material"
 import Balloon from "../../common/Balloon"
-import ConfirmButton from "../../common/ConfirmButton"
 import GlobalStyles from "~/components/common/GlobalStyles"
 import Egg from "~/components/common/Egg"
 import Dragon from "./Dragon"
@@ -34,8 +33,44 @@ const Page = () => {
         description="単発のもの。今日だけや、腰が重い仕事、初めてやりたいことなど"
       />
 
-      <Box sx={{ marginTop: "200px" }}>
-        <ConfirmButton />
+      <Box sx={{ mt: 3 }}>
+        <>
+          <Divider
+            variant="middle"
+            sx={{
+              borderColor: "white",
+            }}
+          />
+          <Box
+            sx={{
+              my: 3,
+            }}
+          >
+            <Typography variant="caption" gutterBottom>
+              達成頻度をあげたり、所定の条件を満たすことで、
+              <br />
+              より経験値をもらえます。
+              <br />
+              経験値を貯めて、◯◯◯◯を
+              <br />
+              レベルアップ & 進化させましょう。
+              <br />
+            </Typography>
+          </Box>
+
+          <Button
+            fullWidth
+            variant="outlined"
+            sx={{
+              backgroundColor: "white",
+              "&:hover": {
+                backgroundColor: "white",
+              },
+            }}
+          >
+            OK
+          </Button>
+        </>
       </Box>
     </Container>
   )

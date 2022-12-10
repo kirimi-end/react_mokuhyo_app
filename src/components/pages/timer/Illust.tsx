@@ -4,7 +4,12 @@ import TimerBack from "~/components/common/TimerBack"
 const Illust = () => {
   return (
     <>
-      <TimerBack />
+      <TimerBack
+        css={{
+          width: "100%",
+          height: "auto",
+        }}
+      />
     </>
   )
 }

@@ -3,7 +3,7 @@ import Illust from "./Illust"
 
 const Page = () => {
   return (
-    <div css={{ padding: "10px" }}>
+    <div css={{ padding: "0px" }}>
       <Illust />
     </div>
   )

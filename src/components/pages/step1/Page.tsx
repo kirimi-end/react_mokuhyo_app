@@ -2,6 +2,7 @@ import { Box, Container, Button, Divider, Typography } from "@mui/material"
 import Balloon from "../../common/Balloon"
 import Step1Form from "./Step1Form"
 import GlobalStyles from "~/components/common/GlobalStyles"
+import OkButton from "~/components/common/OkButton"
 
 const Page = () => {
   return (
@@ -25,18 +26,7 @@ const Page = () => {
               こちらでよろしいですか？
             </Typography>
           </Box>
-          <Button
-            fullWidth
-            variant="outlined"
-            sx={{
-              backgroundColor: "white",
-              "&:hover": {
-                backgroundColor: "white",
-              },
-            }}
-          >
-            OK
-          </Button>
+          <OkButton />
         </>
       </Box>
     </Container>

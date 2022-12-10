@@ -10,6 +10,7 @@ import {
 import Balloon from "../../common/Balloon"
 import GlobalStyles from "~/components/common/GlobalStyles"
 import Egg from "~/components/common/Egg"
+import OkButton from "~/components/common/OkButton"
 
 const Page = () => {
   return (
@@ -54,18 +55,7 @@ const Page = () => {
               こちらでよろしいですか？
             </Typography>
           </Box>
-          <Button
-            fullWidth
-            variant="outlined"
-            sx={{
-              backgroundColor: "white",
-              "&:hover": {
-                backgroundColor: "white",
-              },
-            }}
-          >
-            OK
-          </Button>
+          <OkButton />
         </>
       </Box>
     </Container>

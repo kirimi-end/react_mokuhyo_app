@@ -24,7 +24,26 @@
     "prefix": "fc",
     "body": [
       "const ${1:${TM_FILENAME_BASE/[\\.].+//}} = () => {",
-      "  return <></>",
+      "  return (",
+      "    ${2:<></>}",
+      "  )",
+      "}",
+      "",
+      "export default $1"
+    ]
+  },
+  "React 関数コンポーネント props あり": {
+    "scope": "typescriptreact",
+    "prefix": "fcprops",
+    "body": [
+      "type Props = {",
+      "  $2",
+      "}",
+      "",
+      "const ${1:${TM_FILENAME_BASE/[\\.].+//}} = ({$3}: Props) => {",
+      "  return (",
+      "    ${4:<></>}",
+      "  )",
       "}",
       "",
       "export default $1"

@@ -1,8 +1,8 @@
-import { Box, Container } from "@mui/material"
+import { Box, Container, Button, Divider, Typography } from "@mui/material"
 import Balloon from "../../common/Balloon"
 import Step1Form from "./Step1Form"
-import ConfirmButton from "../../common/ConfirmButton"
 import GlobalStyles from "~/components/common/GlobalStyles"
+import OkButton from "~/components/common/OkButton"
 
 const Page = () => {
   return (
@@ -14,7 +14,20 @@ const Page = () => {
       </Box>
       <Step1Form />
       <Box sx={{ marginTop: "200px" }}>
-        <ConfirmButton />
+        <>
+          <Divider
+            variant="middle"
+            sx={{
+              borderColor: "white",
+            }}
+          />
+          <Box sx={{ textAlign: "center" }}>
+            <Typography variant="caption" gutterBottom>
+              こちらでよろしいですか？
+            </Typography>
+          </Box>
+          <OkButton />
+        </>
       </Box>
     </Container>
   )

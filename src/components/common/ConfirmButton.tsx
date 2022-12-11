@@ -17,6 +17,7 @@ const ConfirmButton = () => {
       <Button
         fullWidth
         variant="outlined"
+        type="submit"
         sx={{
           backgroundColor: "white",
           "&:hover": {

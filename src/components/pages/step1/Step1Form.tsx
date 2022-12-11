@@ -1,6 +1,12 @@
 import { TextField } from "@mui/material"
+import type { UseFormReturn } from "react-hook-form"
+import type { Step1FormFields } from "./Step1Form.types"
 
-const Step1Form = () => {
+type Props = {
+  methods: UseFormReturn<Step1FormFields>
+}
+
+const Step1Form = ({ methods: { register } }: Props) => {
   return (
     <TextField
       fullWidth
@@ -8,6 +14,7 @@ const Step1Form = () => {
       sx={{
         backgroundColor: "white",
       }}
+      {...register("name")}
     />
   )
 }

@@ -9,6 +9,7 @@ const Illust = () => {
     <Box
       css={{
         position: "relative",
+        marginTop: "60px",
       }}
     >
       <TimerBack

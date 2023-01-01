@@ -9,6 +9,7 @@ const TimerCounter = () => {
         fontWeight: "bold",
         fontSize: "40px",
         textAlign: "center",
+        marginTop: "20px",
       }}
     >
       00:00

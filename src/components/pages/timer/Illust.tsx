@@ -1,4 +1,5 @@
 // import { Box, Typography } from "@mui/material"
+import EggTimer from "~/components/common/EggTimer"
 import TimerBack from "~/components/common/TimerBack"
 
 const Illust = () => {
@@ -10,6 +11,7 @@ const Illust = () => {
           height: "auto",
         }}
       />
+      <EggTimer />
     </>
   )
 }

@@ -9,7 +9,7 @@ const Illust = () => {
     <Box
       css={{
         position: "relative",
-        marginTop: "60px",
+        marginTop: "160px",
       }}
     >
       <TimerBack
@@ -22,7 +22,7 @@ const Illust = () => {
         <Box
           css={{
             position: "absolute",
-            bottom: "30px",
+            bottom: "10px",
             left: "calc(50% - 140px)",
             width: "280px",
             display: "flex",
